@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Hiring Form</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+</head>
+<body>
+    <h1>Staff Hiring Form</h1>
+    <form id="hireStaffForm">
+        <input type="text" name="staffno" placeholder="Staff No" required>
+        <input type="text" name="fname" placeholder="First Name" required>
+        <input type="text" name="lname" placeholder="Last Name" required>
+        <input type="text" name="position" placeholder="Position" required>
+        <input type="text" name="sex" placeholder="Sex" required>
+        <input type="text" name="dob" placeholder="Date of Birth" required>
+        <input type="text" name="salary" placeholder="Salary" required>
+        <input type="text" name="branchNo" placeholder="Branch Number" required>
+        <input type="text" name="telephone" placeholder="Telephone" required>
+        <input type="text" name="mobile" placeholder="Mobile" required>
+        <input type="text" name="email" placeholder="Email" required>
+
+        <button type="submit">Hire Staff</button>
+    </form>
+
+    <script>
+        document.getElementById('hireStaffForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const formDataObj = Object.fromEntries(formData.entries());
+
+            fetch('/hireStaff', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formDataObj),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

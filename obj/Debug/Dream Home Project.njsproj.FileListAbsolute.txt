@@ -1,0 +1,3 @@
+C:\Users\evanw\OneDrive\Desktop\Advanded Database Concepts\Dream Home\Dream Home Project\Dream Home Project\obj\Debug\Dream Home Project.njsproj.AssemblyReference.cache
+C:\Users\evanw\OneDrive\Desktop\Advanded Database Concepts\Dream Home\Dream Home Project\Dream Home Project\obj\Debug\Dream Home Project.njsproj.CoreCompileInputs.cache
+C:\Users\evanw\OneDrive\Desktop\Advanded Database Concepts\Dream Home\Dream Home Project\Dream Home Project\bin\Microsoft.NodejsTools.WebRole.dll
