@@ -22,9 +22,15 @@
         <input type="text" name="email" placeholder="Email" required>
 
         <button type="submit">Hire Staff</button>
+        <button type="submit" onclick="resetForm()">Cancel</button>
+    </form>
     </form>
 
     <script>
+        function resetForm() {
+            document.getElementById("hireStaffForm").reset();
+        }
+        
         document.getElementById('hireStaffForm').addEventListener('submit', function(e) {
             e.preventDefault();
 
